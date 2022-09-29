@@ -126,9 +126,6 @@
         </p>
       </div>
       <iframe id="draw-iframe" class="hide" src=""></iframe>
-      <div id="form-edit" class="hide">
-        <input type="submit" value="Edit" onclick="onEditClick()" />
-      </div>
     </div>
 
     <script>
@@ -169,10 +166,8 @@
         document.getElementById("form").classList.add("hide");
 
         const iframe = document.getElementById("draw-iframe");
-        const editForm = document.getElementById("form-edit");
         iframe.setAttribute("src", url);
         iframe.classList.remove("hide");
-        editForm.classList.remove("hide");
       }
 
       function onGoClick() {
@@ -182,10 +177,6 @@
         document.getElementById("finalUrl").value = finalUrl;
 
         document.getElementById("form-result").classList.remove("hide");
-      }
-
-      function onEditClick() {
-        console.log(url);
       }
 
       function onCopyClick() {
